@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save NCAR</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #212529;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+        .navbar img {
+            height: 70px;
+        }
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .hamburger-bar {
+            width: 30px;
+            height: 3px;
+            background-color: #FFFFFF;
+            border-radius: 2px;
+            transition: all 0.3s linear;
+        }
+        .slide-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #212529;
+            padding-top: 90px;
+            transition: 0.3s;
+            z-index: 999;
+        }
+        .slide-menu a {
+            display: block;
+            color: #8FCBD5;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+        .slide-menu a:hover {
+            background-color: #3a3f44;
+        }
+        .content {
+            flex: 1 0 auto;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+        }
+        .row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .row:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        .row .column {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .row h1 {
+            font-size: 3.0em;
+        }
+        .row h2 {
+            font-size: 1.25em;
+        }
+        .row p {
+            font-size: 1.25em;
+        }
+        .row img {
+            max-width: 70%;
+            height: auto;
+            flex: 1;
+        }
+        .row .text {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .row a {
+            font-weight: bold;
+        }
+        .footer {
+            flex-shrink: 0;
+            background-color: #212529;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+        }
+        .slide-menu.active {
+            right: 0;
+        }
+        .content.active {
+            margin-right: 300px;
+        }
+        .hamburger.active .hamburger-bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active .hamburger-bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .hamburger-bar:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media screen and (max-aspect-ratio: 4/3) {
+          .row {
+            flex-direction: column;
+            padding: 10px;
+          }
+          .row .column {
+            max-width: 66%;
+          }
+          .row h1 {
+            font-size: 2em;
+          }
+          .row h2, .row p {
+            font-size: 1em;
+          }
+          .content {
+            padding: 10px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logos">
+            <a href="index.html" class="logo-link">
+                <img src="SaveNCARBanner2.webp" alt="Save NCAR" class="logo-main">
+            </a>
+            <span class="logo-separator"></span>
+            <a href="https://www.nokings.org" target="_blank" class="logo-link">
+                <img src="No+Kings+Logo_Horizontal_ForDarkBackgrounds.webp" alt="No Kings" class="logo-partner">
+            </a>
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+    </nav>
+
+    <div class="slide-menu">
+        <a href="index.html">Home</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="foia.html">FOIA Request</a>
+    </div>
+
+    <div class="content">
+        <div class="row">
+            <div class="text">
+                <h1>NCAR’s Mission</h1>
+				<section>
+                <p>
+                    <h3>Building national resilience through Earth system research, scientific empowerment, and a vision for our future.</h3>
+                    The <a href="https://ncar.ucar.edu/" style="color: #348596; text-decoration: none; font-weight: bold;">NSF National Center for Atmospheric Research</a>
+                    (NSF NCAR) is a Federally Funded Research and Development
+                    Center (FFRDC) established by the National Science
+                    Foundation in 1960. Its mission is to accelerate the
+                    nation’s ability to understand and predict atmospheric and
+                    geospace behavior for the betterment of life on Earth.
+                    Managed by the nonprofit UCAR consortium, NSF NCAR provides
+                    the scientific community with essential resources—such as
+                    supercomputers, research aircraft, and open-source
+                    models—that are beyond the reach of individual
+                    institutions.
+                </p>
+                <p>
+                    <h3>The Blueprint for Atmospheric Leadership</h3>
+                    The <a href="https://ucar.canto.com/direct/document/74pap3dm251f9bilp25vs0l04b/w57k7rxLVh62TBdzmLxv-aOEdXY/original?content-type=application%2Fpdf&name=NCAR_SP_033125.pdf" style="color: #348596; text-decoration: none; font-weight: bold;">2025-2029 NSF NCAR Strategic Plan</a>
+                    outlines a "North Star" for the center, focusing on four
+                    interconnected themes designed to address the increasing
+                    frequency of billion-dollar environmental disasters and the
+                    evolving needs of society:
+                    <ul>
+                    <li style="margin-bottom: 10px;">
+                        <strong>Building National Resilience:</strong> NCAR is shifting toward "convergence research," which integrates diverse fields like social science and engineering to provide actionable information that helps communities prepare for hazards like wildfires and hurricanes.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong>Understanding the Earth System:</strong> The center continues to prioritize fundamental research to close critical knowledge gaps in the "coupled Earth system"—exploring how the atmosphere, oceans, land, and Sun interact.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong>Empowering the Scientific Community:</strong> By developing next-generation community models and observational platforms, NCAR ensures that researchers worldwide have the tools necessary to drive scientific breakthroughs.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong>Inspiring Our Scientific Future:</strong> Recognizing that people are its foundation, NCAR partners with academic institutions to nurture a talented, interdisciplinary workforce and engage the public through education and outreach.
+                    </li>
+                </p>
+				</section>
+				<section>
+                <p>
+                    Through these efforts, NCAR aims to foster a collaborative research environment that leverages emerging technologies—including
+                    <a href="https://www.eol.ucar.edu/airborne-phased-array-radar-apar-0" style="color: #348596; text-decoration: none; font-weight: bold;">Airborn Phased Array Radar</a>
+                    (APAR) for storm-scale observations, the
+                    <a href="https://www.cesm.ucar.edu/" style="color: #348596; text-decoration: none; font-weight: bold;">Community Earth System Model</a>
+                    (CESM3) for global simulations, and AI-Enhanced
+                    Modeling—all powered by the world-class high-performance
+                    computing capabilities of the
+                    <a href="https://www.cisl.ucar.edu/ncar-wyoming-supercomputing-center" style="color: #348596; text-decoration: none; font-weight: bold;">NCAR-Wyoming Supercomputing Center</a>
+                    to ensure a safer and more resilient nation.
+                </p>
+				</section>
+				<section>
+                <p>
+				    <h3>Fun Facts</h3>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            If the Earth were reduced to the size of a typical apple, the relative thickness of the atmosphere is <strong>thinner</strong> than the apple's skin!
+                        </li>
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            A typical stage of the Tour de France covers a distance nearly equivalent to the distance from the Earth's surface to the edge of space and back!
+                        </li>
+				    </ul>
+                </p>
+				</section>
+            </div>
+            <div class="column">
+              <img src="SaveNCARLogo.webp" alt="Save NCAR">
+            </div>
+        </div>
+        <div class="row">
+            <div class="text">
+                <h1>Welcome To Boulder Challenge</h1>
+                <p>
+                    <strong>Help us put NCAR back on the map—literally.</strong>
+                </p>
+                <section>
+                    We’re looking for the most iconic, creative, and inspiring "Welcome to Boulder" sign designs that celebrate our city as the proud <strong>Home of NCAR</strong>.
+                </section>
+
+                <section>
+                <h2>How to Enter</h2>
+                <ol>
+                <li style="margin-bottom: 10px;"><strong>Pick your AI Artist:</strong> Use <a href="https://gemini.google.com/app" style="color: #348596; text-decoration: none; font-weight: bold;">Gemini Nano Banana</a>, <a href="https://chatgpt.com/images" style="color: #348596; text-decoration: none; font-weight: bold;"/>ChatGPT</a>, or your favorite generator.</li>
+                <li style="margin-bottom: 10px;"><strong>Upload the reference:</strong> Get the reference image <a href="WelcomeToBoulder-Original.jpg" style="color: #348596; text-decoration: none; font-weight: bold;">here</a>.</li>
+                <li style="margin-bottom: 10px;"><strong>Set the Scene:</strong> Use a prompt like: "Add a beautiful 'Welcome to Boulder' landmark sign featuring the words 'Home of NCAR'."</li>
+                <li style="margin-bottom: 10px;"><strong>Submit & Share:</strong> Send your masterpiece to <a href="mailto:hello@savencar.org" style="color: #348596; text-decoration: none; font-weight: bold;">hello@savencar.org</a> and post it on social media with #SaveNCAR.</li>
+                </ol>
+                </section>
+
+                <section>
+                <h2>Your Vision in Action</h2>
+                <p>Here is how your entry will help to promote the Save NCAR cause.</p>
+        
+                <ul>
+                <li style="margin-bottom: 10px;">
+                    <strong>A Collective Voice:</strong> Entries may be featured in a digital collage to promote a formal City of Boulder initiative, advocating for a permanent "Welcome" sign at our city’s primary gateway.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <strong>Advocacy & Outreach:</strong> Your images may be shared with legislators, featured in social media campaigns, or displayed at local promotional events to highlight the community's support for NCAR.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <strong>Community Driven:</strong> This is a collaborative effort rather than a judged competition. While there are no prizes, every entry serves as a vital tool for advocacy.
+                </li>
+                </ul>
+
+                <p style="font-size: 0.9em; font-style: italic;">
+                    Note: To ensure a positive and inclusive campaign, entries containing offensive messages or inappropriate content will not be used.
+                </p>
+                </section>
+
+                <section>
+                <h2>Looking for inspiration?</h2>
+                Check out <a href="https://boulderreportinglab.org/2026/01/29/when-boulder-was-the-place-to-live-how-the-city-marketed-itself-for-decades-to-newcomers" style="color: #348596; text-decoration: none; font-weight: bold;">When Boulder was the 'Place to Live'</a> to see how the city has marketed its identity over the decades.
+                </section>
+            </div>
+            <div class="column">
+              <img src="WelcomeToBoulder-Concept.webp" alt="Welcome to Boulder">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+            We’d love to hear from you! Reach out at 
+            <a href="mailto:hello@savencar.org" style="color: #8FCBD5; text-decoration: none; font-weight: bold;">
+                hello@savencar.org
+            </a>
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const slideMenu = document.querySelector('.slide-menu');
+            const content = document.querySelector('.content');
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                slideMenu.classList.toggle('active');
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

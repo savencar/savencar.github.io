@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save NCAR</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #212529;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+        .navbar img {
+            height: 70px;
+        }
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .hamburger-bar {
+            width: 30px;
+            height: 3px;
+            background-color: #FFFFFF;
+            border-radius: 2px;
+            transition: all 0.3s linear;
+        }
+        .slide-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #212529;
+            padding-top: 90px;
+            transition: 0.3s;
+            z-index: 999;
+        }
+        .slide-menu a {
+            display: block;
+            color: #8FCBD5;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+        .slide-menu a:hover {
+            background-color: #3a3f44;
+        }
+        .content {
+            flex: 1 0 auto;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+        }
+        .row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .row:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        .row .column {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .row h1 {
+            font-size: 3.0em;
+        }
+        .row h2 {
+            font-size: 1.25em;
+        }
+        .row p {
+            font-size: 1.25em;
+        }
+        .row img {
+            max-width: 70%;
+            height: auto;
+            flex: 1;
+        }
+        .row .text {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .row a {
+            font-weight: bold;
+        }
+        .footer {
+            flex-shrink: 0;
+            background-color: #212529;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+        }
+        .slide-menu.active {
+            right: 0;
+        }
+        .content.active {
+            margin-right: 300px;
+        }
+        .hamburger.active .hamburger-bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active .hamburger-bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .hamburger-bar:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media screen and (max-aspect-ratio: 4/3) {
+          .row {
+            flex-direction: column;
+            padding: 10px;
+          }
+          .row .column {
+            max-width: 66%;
+          }
+          .row h1 {
+            font-size: 2em;
+          }
+          .row h2, .row p {
+            font-size: 1em;
+          }
+          .content {
+            padding: 10px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logos">
+            <a href="index.html" class="logo-link">
+                <img src="SaveNCARBanner2.webp" alt="Save NCAR" class="logo-main">
+            </a>
+            <span class="logo-separator"></span>
+            <a href="https://www.nokings.org" target="_blank" class="logo-link">
+                <img src="No+Kings+Logo_Horizontal_ForDarkBackgrounds.webp" alt="No Kings" class="logo-partner">
+            </a>
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+    </nav>
+
+    <div class="slide-menu">
+        <a href="index.html">Home</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="foia.html">FOIA Request</a>
+    </div>
+
+    <div class="content">
+        <div class="row">
+            <div class="text">
+
+			<h1>FOIA REQUEST</h1>
+            <section>
+			<h2>NCAR Restructuring and Staff Memo OD 25-52</h2>
+			<p>
+				January 17, 2026
+			</p>
+
+			<p>
+			Dear FOIA Officer,
+			</p>
+
+			<p>
+			This letter is a request under the Freedom of Information Act.
+			</p>
+
+			<p>
+			I request a copy of the following documents, or documents containing the following information.
+			<ul>
+			<li style="margin-bottom: 10px;"><strong>Staff Memorandum OD 25-52 (December 2025):</strong> Including the full text, all attachments,
+			    and any subsequent directives rescinding or modifying the RIF actions.</li>
+			<li style="margin-bottom: 10px;"><strong>NCAR Dear Colleague Letter (DCL) (December 2025 or January 2026):</strong> The
+			    document (and drafts) outlining the divestment of the NCAR-Wyoming Supercomputer,
+			    the NCAR research aircraft (HIAPER and C-130), and the Mesa Laboratory closure.</li>
+			<li style="margin-bottom: 10px;"><strong>Analytical Reports:</strong> Any CBA, RIA, EIA, or Viability Assessments regarding NCAR
+			    created by or for the NSF from January 2025 to present.</li>
+			<li style="margin-bottom: 10px;"><strong>OMB Correspondence:</strong> All formal directives from the Office of Management and Budget
+			    to the NSF regarding the 'Agency Restructuring and Reduction-in-Force Plan' (ARRP)
+			    from October 2025 to present.</li>
+			<li style="margin-bottom: 10px;"><strong>UCAR Modifications:</strong> Copies of all contract modifications or supplemental agreements
+			    between NSF and the University Corporation for Atmospheric Research (UCAR)
+			    regarding the management of NCAR from October 2025 to present.</li>
+			<li style="margin-bottom: 10px;"><strong>Personnel Records:</strong> The formal resignation letter and any "final exit" memorandum
+			    issued by Sethuraman Panchanathan on or about April 24, 2025.</li>
+			</ul>
+			</p>
+
+			<p>
+			<strong>Fee Waiver.</strong> I request a waiver of all fees for this request. Disclosure of the requested
+			information is intended to enhance the public understanding of recent events related to the
+			proposed NCAR closure. I intend to disseminate this information to the public via news outlets
+			including the Daily Camera to inform the Boulder and scientific communities about these events.
+			</p>
+
+			<p>
+			<strong>Electronic Format Request Option.</strong> I request that the information I seek be provided in
+			electronic format.
+			</p>
+
+			<p>
+			<strong>Email Contact Option.</strong> Please contact me at <a href="mailto:hello@savencar.org" style="color: #348596; text-decoration: none; font-weight: bold;">hello@savencar.org</a> to discuss my
+			request, if necessary.
+			</p>
+
+			<p>
+			Sincerely,
+			</p>
+			<p>
+			Save NCAR<br/>
+			</p>
+            </section>
+            </div>
+            <div class="column">
+              <img src="SaveNCARLogo.webp" alt="Save NCAR">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+			We’d love to hear from you! Reach out at 
+            <a href="mailto:hello@savencar.org" style="color: #8FCBD5; text-decoration: none; font-weight: bold;">
+                hello@savencar.org
+            </a>
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const slideMenu = document.querySelector('.slide-menu');
+            const content = document.querySelector('.content');
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                slideMenu.classList.toggle('active');
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

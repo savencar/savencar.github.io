@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save NCAR</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #212529;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+        .navbar img {
+            height: 70px;
+        }
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .hamburger-bar {
+            width: 30px;
+            height: 3px;
+            background-color: #FFFFFF;
+            border-radius: 2px;
+            transition: all 0.3s linear;
+        }
+        .slide-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #212529;
+            padding-top: 90px;
+            transition: 0.3s;
+            z-index: 999;
+        }
+        .slide-menu a {
+            display: block;
+            color: #8FCBD5;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+        .slide-menu a:hover {
+            background-color: #3a3f44;
+        }
+        .content {
+            flex: 1 0 auto;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+        }
+        .row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .row:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        .row .column {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .row h1 {
+            font-size: 3.0em;
+        }
+        .row h2 {
+            font-size: 1.25em;
+        }
+        .row p {
+            font-size: 1.25em;
+        }
+        .row img {
+            max-width: 70%;
+            height: auto;
+            flex: 1;
+        }
+        .row .text {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .row a {
+            font-weight: bold;
+        }
+        .footer {
+            flex-shrink: 0;
+            background-color: #212529;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+        }
+        .slide-menu.active {
+            right: 0;
+        }
+        .content.active {
+            margin-right: 300px;
+        }
+        .hamburger.active .hamburger-bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active .hamburger-bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .hamburger-bar:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media screen and (max-aspect-ratio: 4/3) {
+          .row {
+            flex-direction: column;
+            padding: 10px;
+          }
+          .row .column {
+            max-width: 66%;
+          }
+          .row h1 {
+            font-size: 2em;
+          }
+          .row h2, .row p {
+            font-size: 1em;
+          }
+          .content {
+            padding: 10px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logos">
+            <a href="index.html" class="logo-link">
+                <img src="SaveNCARBanner2.webp" alt="Save NCAR" class="logo-main">
+            </a>
+            <span class="logo-separator"></span>
+            <a href="https://www.nokings.org" target="_blank" class="logo-link">
+                <img src="No+Kings+Logo_Horizontal_ForDarkBackgrounds.webp" alt="No Kings" class="logo-partner">
+            </a>
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+    </nav>
+
+    <div class="slide-menu">
+        <a href="index.html">Home</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="foia.html">FOIA Request</a>
+    </div>
+
+    <div class="content">
+        <div class="row">
+            <div class="text">
+                <h1>Timeline & Key Events</h1>
+                <h2>2025</h2>
+                <section>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            <span style="display: block; font-size: 0.85em; color: #adb5bd; font-weight: bold; text-transform: uppercase;">December 16, 2025</span>
+                            <a href="https://news.ucar.edu/133054/ucar-statement-reports-nsf-ncar-could-be-dismantled" style="color: #348596; text-decoration: none; font-weight: bold; font-size: 1.1em;">UCAR statement on reports that NSF NCAR could be dismantled</a>
+                        </li>
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            <span style="display: block; font-size: 0.85em; color: #adb5bd; font-weight: bold; text-transform: uppercase;">December 17, 2025</span>
+                            <a href="https://www.usatoday.com/story/news/politics/2025/12/16/trump-dismantle-national-center-atmospheric-research-climate/87798771007/" style="color: #348596; text-decoration: none; font-weight: bold; font-size: 1.1em;">Trump moves to dismantle major US climate research center in Colorado</a>
+                        </li>
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            <span style="display: block; font-size: 0.85em; color: #adb5bd; font-weight: bold; text-transform: uppercase;">December 18, 2025</span>
+                            <a href="https://www.hickenlooper.senate.gov/press_releases/hickenlooper-bennet-hold-appropriations-package-to-demand-ncar-funding/" style="color: #348596; text-decoration: none; font-weight: bold; font-size: 1.1em;">Hickenlooper, Bennet Hold Appropriations Package to Demand NCAR Funding</a>
+                        </li>
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            <span style="display: block; font-size: 0.85em; color: #adb5bd; font-weight: bold; text-transform: uppercase;">December 20, 2025</span>
+                            <a href="https://www.cpr.org/2025/12/20/ncar-boulder-trump-dismantle-protest/" style="color: #348596; text-decoration: none; font-weight: bold; font-size: 1.1em;">Hundreds protest Trump’s move to dismantle NCAR, a premier climate and weather hub</a>
+                        </li>
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            <span style="display: block; font-size: 0.85em; color: #adb5bd; font-weight: bold; text-transform: uppercase;">December 22, 2025</span>
+                            <a href="https://neguse.house.gov/media/press-releases/colorado-reps-neguse-hurd-and-senators-bennet-hickenlooper-mobilize-bipartisan" style="color: #348596; text-decoration: none; font-weight: bold; font-size: 1.1em;">Colorado Reps. Neguse & Hurd and Senators Bennet & Hickenlooper Mobilize Bipartisan, Bicameral Coalition to Protect NCAR</a>
+                        </li>
+					</ul>
+				</section>
+                <h2>2026</h2>
+                <section>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            <span style="display: block; font-size: 0.85em; color: #adb5bd; font-weight: bold; text-transform: uppercase;">January 9, 2026</span>
+                            <a href="https://neguse.house.gov/media/press-releases/congressman-neguse-statement-final-passage-three-bill-fiscal-year-2026-minibus" style="color: #348596; text-decoration: none; font-weight: bold; font-size: 1.1em;">Congressman Neguse Statement on Final Passage of Three-Bill Fiscal Year 2026 Minibus</a>
+                        </li>
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            <span style="display: block; font-size: 0.85em; color: #adb5bd; font-weight: bold; text-transform: uppercase;">January 23, 2026</span>
+                            <a href="https://www.nsf.gov/funding/information/dcl-nsf-intent-restructure-critical-weather-infrastructure" style="color: #348596; text-decoration: none; font-weight: bold; font-size: 1.1em;">NSF Intent to Restructure Critical Weather Infrastructure</a>
+                        </li>
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            <span style="display: block; font-size: 0.85em; color: #adb5bd; font-weight: bold; text-transform: uppercase;">January 27, 2026</span>
+                            <a href="https://neguse.house.gov/media/press-releases/ncar-faces-potential-dismantling-rep-neguse-calls-coloradans-make-voices-heard" style="color: #348596; text-decoration: none; font-weight: bold; font-size: 1.1em;">As NCAR Faces Potential Dismantling, Rep. Neguse Calls on Coloradans to Make Voices Heard During NSF Public Comment Period</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="column">
+              <img src="SaveNCARProtest.webp" alt="Save NCAR">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+            We’d love to hear from you! Reach out at 
+            <a href="mailto:hello@savencar.org" style="color: #8FCBD5; text-decoration: none; font-weight: bold;">
+                hello@savencar.org
+            </a>
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const slideMenu = document.querySelector('.slide-menu');
+            const content = document.querySelector('.content');
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                slideMenu.classList.toggle('active');
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

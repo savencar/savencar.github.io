@@ -155,6 +155,34 @@
             padding: 10px;
           }
         }
+
+        .fun-fact {
+          max-width: 400px;
+          margin: 20px auto;
+          padding: 16px 20px;
+          border: 2px solid #8FCBD5;
+          border-radius: 8px;
+          background-color: #f6f6f6;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          text-align: center;
+        }
+
+        .fun-fact__title {
+          margin: 0 0 8px;
+          font-size: 1rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: #348596;
+        }
+
+        .fun-fact__body {
+          margin: 0;
+          font-size: 0.95rem;
+          color: #333;
+          line-height: 1.5;
+        }
     </style>
 </head>
 <body>
@@ -186,7 +214,7 @@
         <div class="row">
             <div class="text">
                 <h1>NCAR’s Mission</h1>
-				<section>
+                <section>
                 <p>
                     <h3>Building national resilience through Earth system research, scientific empowerment, and a vision for our future.</h3>
                     The <a href="https://ncar.ucar.edu/" style="color: #348596; text-decoration: none; font-weight: bold;">NSF National Center for Atmospheric Research</a>
@@ -222,8 +250,8 @@
                         <strong>Inspiring Our Scientific Future:</strong> Recognizing that people are its foundation, NCAR partners with academic institutions to nurture a talented, interdisciplinary workforce and engage the public through education and outreach.
                     </li>
                 </p>
-				</section>
-				<section>
+                </section>
+                <section>
                 <p>
                     Through these efforts, NCAR aims to foster a collaborative research environment that leverages emerging technologies—including
                     <a href="https://www.eol.ucar.edu/airborne-phased-array-radar-apar-0" style="color: #348596; text-decoration: none; font-weight: bold;">Airborn Phased Array Radar</a>
@@ -235,20 +263,7 @@
                     <a href="https://www.cisl.ucar.edu/ncar-wyoming-supercomputing-center" style="color: #348596; text-decoration: none; font-weight: bold;">NCAR-Wyoming Supercomputing Center</a>
                     to ensure a safer and more resilient nation.
                 </p>
-				</section>
-				<section>
-                <p>
-				    <h3>Fun Facts</h3>
-                    <ul style="list-style-type: none; padding-left: 0;">
-                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
-                            If the Earth were reduced to the size of a typical apple, the relative thickness of the atmosphere is <strong>thinner</strong> than the apple's skin!
-                        </li>
-                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
-                            A typical stage of the Tour de France covers a distance nearly equivalent to the distance from the Earth's surface to the edge of space and back!
-                        </li>
-				    </ul>
-                </p>
-				</section>
+                </section>
             </div>
             <div class="column">
               <img src="SaveNCARLogo.webp" alt="Save NCAR">
@@ -304,6 +319,15 @@
               <img src="WelcomeToBoulder-Concept.webp" alt="Welcome to Boulder">
             </div>
         </div>
+    </div>
+
+    <div class="fun-fact">
+      <h2 class="fun-fact__title">Fun Fact</h2>
+      <p class="fun-fact__body">
+          <strong>If the Earth were reduced to the size of a typical apple<br/>
+          The relative thickness of the atmosphere is...<br/>
+          THINNER THAN THE APPLE'S SKIN!</strong>
+      </p>
     </div>
 
     <div class="footer">

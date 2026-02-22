@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save NCAR</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #212529;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+        .navbar img {
+            height: 70px;
+        }
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .hamburger-bar {
+            width: 30px;
+            height: 3px;
+            background-color: #FFFFFF;
+            border-radius: 2px;
+            transition: all 0.3s linear;
+        }
+        .slide-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #212529;
+            padding-top: 90px;
+            transition: 0.3s;
+            z-index: 999;
+        }
+        .slide-menu a {
+            display: block;
+            color: #8FCBD5;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+        .slide-menu a:hover {
+            background-color: #3a3f44;
+        }
+        .content {
+            flex: 1 0 auto;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+        }
+        .row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .row:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        .row .column {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .row h1 {
+            font-size: 3.0em;
+        }
+        .row h2 {
+            font-size: 1.25em;
+        }
+        .row p {
+            font-size: 1.25em;
+        }
+        .row img {
+            max-width: 70%;
+            height: auto;
+            flex: 1;
+        }
+        .row .text {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .row a {
+            font-weight: bold;
+        }
+        .footer {
+            flex-shrink: 0;
+            background-color: #212529;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+        }
+        .slide-menu.active {
+            right: 0;
+        }
+        .content.active {
+            margin-right: 300px;
+        }
+        .hamburger.active .hamburger-bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active .hamburger-bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .hamburger-bar:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media screen and (max-aspect-ratio: 4/3) {
+          .row {
+            flex-direction: column;
+            padding: 10px;
+          }
+          .row .column {
+            max-width: 66%;
+          }
+          .row h1 {
+            font-size: 2em;
+          }
+          .row h2, .row p {
+            font-size: 1em;
+          }
+          .content {
+            padding: 10px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logos">
+            <a href="index.html" class="logo-link">
+                <img src="SaveNCARBanner2.webp" alt="Save NCAR" class="logo-main">
+            </a>
+            <span class="logo-separator"></span>
+            <a href="https://www.nokings.org" target="_blank" class="logo-link">
+                <img src="No+Kings+Logo_Horizontal_ForDarkBackgrounds.webp" alt="No Kings" class="logo-partner">
+            </a>
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+    </nav>
+
+    <div class="slide-menu">
+        <a href="index.html">Home</a>
+        <a href="challange.html">Boulder Challange</a>
+        <a href="timeline.html">Timeline & Key Events</a>
+        <a href="governance.html">Governance</a>
+        <a href="foia.html">FOIA Requests</a>
+        <a href="graphics.html">Graphics</a>
+    </div>
+
+    <div class="content">
+        <div class="row">
+            <div class="text">
+                <h1>Governance</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text">
+
+            <h2>The National Science Foundation Act of 1950</h2>
+            <section>
+            <p>
+                The
+                <a href="https://uscode.house.gov/view.xhtml?req=(title:42%20section:1861%20edition:prelim)" style="color: #8FCBD5; text-decoration: none; font-weight: bold;">National Science Foundation Act</a>
+                of 1950 (codified as 42 USC §1861) established the NSF as an independent agency within the executive branch. Its statutory mandate is to promote scientific progress, advance national health and prosperity, and secure national defense. The agency’s core structure consists of a National Science Board, which provides policy guidance and oversight, and a Director, who handles the day-to-day administration of the Foundation. This "organic act" serves as the legal bedrock for the agency's authority to award grants and support basic research across all non-medical scientific disciplines.
+            </p>
+            <p>
+                Over the decades, the Act has been significantly refined through various amendments and reorganization plans. Notably, Reorganization Plan No. 2 of 1962 strengthened the leadership of the Director by making them a voting member and Chairman of the Executive Committee, while also creating the Office of Science and Technology (OSTP) within the Executive Office of the President to handle high-level policy coordination that the NSF could not manage alone. More recent amendments, such as the America COMPETES Act and the CHIPS and Science Act, have expanded the NSF's focus to include specific missions like improving STEM education, fostering innovation, and broadening participation for underrepresented groups.
+            </p>
+            <p>
+                In the context of recent challenges to the agency, this statute is critical because it defines the NSF’s independence and its merit-based mission. While the President appoints the Director (with Senate approval), the agency's primary function is legally tied to the support of basic research and education as determined by the Board and the merit review process. Any effort to dismantle or fundamentally pivot the agency's priorities must grapple with these long-standing statutory definitions of how the Foundation is composed and what it is legally required to achieve.
+            </p>
+            </section>
+            </div>
+            <div class="column">
+              <img src="SaveNCARLogo.webp" alt="Save NCAR">
+            </div>
+        </div>
+        <div class="row">
+            <div class="text">
+
+            <h2>The Code of Federal Regulations</h2>
+            <section>
+            <p>
+                The
+                <a href="https://www.govinfo.gov/content/pkg/CFR-2024-title45-vol4/pdf/CFR-2024-title45-vol4.pdf" style="color: #8FCBD5; text-decoration: none; font-weight: bold;">Code of Federal Regulations</a>
+                (<a href="https://www.ecfr.gov/current/title-45/subtitle-B/chapter-VI" style="color: #8FCBD5; text-decoration: none; font-weight: bold;">eCFR</a>)
+                , Title 45, Chapter VI, contains the specific, legally binding rules that dictate how the National Science Foundation operates on a day-to-day basis. While the NSF Act of 1950 provides the broad "what" and "why" of the agency, the CFR provides the "how." It covers everything from the "gold-standard" merit review process to the ethical conduct required of employees and grant recipients. For an advocacy campaign, this chapter is vital because it establishes the due process the agency must follow before it can cancel a grant or change its funding criteria.
+            </p>
+            <p>
+                A significant portion of Chapter VI is dedicated to Part 600 (Grant Policy and Procedures) and Part 689 (Research Misconduct). These sections outline the rigorous standards for intellectual merit and broader impacts that every proposal must meet. Crucially, the regulations establish that once a grant is awarded, it is a legal obligation. The CFR sets strict limits on how and why an award can be suspended or terminated, generally requiring evidence of mismanagement or a failure to meet scientific goals—rather than shifting political "priorities."
+            </p>
+            <p>
+                Additionally, Chapter VI includes essential protections for transparency and civil rights. It contains the regulations for the Freedom of Information Act (FOIA) and the Privacy Act, which allow the public to request data on how the agency is making decisions. It also houses the "Nondiscrimination" rules (Parts 611–618), which legally mandate that NSF-funded programs must be accessible to all, regardless of race, gender, or disability. In the current climate of "right-sizing," these regulations serve as a primary legal defense for researchers, as any sudden departure from these established rules could be challenged in court as "arbitrary and capricious."
+            </p>
+            </section>
+            </div>
+            <div class="column">
+              <img src="SaveNCARLogo.webp" alt="Save NCAR">
+            </div>
+        </div>
+        <div class="row">
+            <div class="text">
+
+            <h2>The Impoundment Control Act of 1974</h2>
+            <section>
+            <p>
+                The
+                <a href="https://www.congress.gov/crs-product/R48432" style="color: #8FCBD5; text-decoration: none; font-weight: bold;">Impoundment Control Act</a>
+                (ICA) of 1974 was enacted to reassert the "power of the purse" as a constitutional authority of Congress after President Richard Nixon began unilaterally withholding appropriated funds to curtail programs he opposed. The Act fundamentally changed the executive-legislative balance by amending the Antideficiency Act and categorizing impoundments into two types: deferrals (temporary delays in spending) and rescissions (permanent cancellations). By codifying these rules, Congress ensured that a President could no longer indefinitely "freeze" funds without a specific statutory framework for transparency and congressional review.
+            </p>
+            <p>
+                Under the ICA, a President who wishes to permanently cancel spending must submit a formal rescission message to Congress. This triggers a specific 45-day period of continuous session during which the funds may be temporarily withheld. If Congress does not pass a bill to approve the rescission within those 45 days, the President is legally required to release the funds. The Government Accountability Office (GAO) is tasked with overseeing this process, ensuring that the executive branch does not use withholdings to circumvent the enacted budget or allow funds to expire (lapse) before Congress can act.
+            </p>
+            <p>
+                To facilitate this process, the Act provides expedited legislative procedures that the House and Senate may use to consider presidential rescission requests. These rules include limits on debate time, which effectively prevents a filibuster in the Senate by eliminating the need for a three-fifths vote to invoke cloture. While these "fast-track" procedures are used infrequently, they provide a powerful mechanism for Congress to address executive spending cuts quickly. Ultimately, the ICA ensures that while a President can suggest where to save money, the final decision to cancel enacted spending remains a legislative power.
+            </p>
+            </section>
+            </div>
+            <div class="column">
+              <img src="SaveNCARLogo.webp" alt="Save NCAR">
+            </div>
+        </div>
+        <div class="row">
+            <div class="text">
+
+            <h2>The Freedom of Information Act of 1966</h2>
+            <section>
+            <p>
+                The
+                <a href="https://www.congress.gov/crs-product/R46238" style="color: #8FCBD5; text-decoration: none; font-weight: bold;">Freedom of Information Act</a>
+                (FOIA), originally enacted in 1966, creates a legal framework for public access to federal agency records, operating on the principle that an informed electorate is vital to a functioning democracy. The Act establishes a three-part disclosure system: it requires agencies to publish procedural rules in the Federal Register, proactively disclose frequently requested records electronically, and—most commonly—provide specific records to any person upon request. While the Act is broad, it applies only to "agencies" within the executive branch (and independent regulatory agencies); it does not cover Congress, the federal courts, or parts of the Executive Office of the President whose sole function is to advise the President.
+            </p>
+            <p>
+                To balance transparency with the need for governmental and private confidentiality, FOIA contains nine enumerated exemptions. These allow agencies to withhold sensitive information such as classified national security data, trade secrets, personal medical files, and records involved in ongoing law enforcement investigations. Additionally, the Act includes three "exclusions" for particularly sensitive law enforcement matters, allowing an agency to treat such records as if they do not exist. Despite these protections, the exemptions are generally discretionary, and the "foreseeable harm" standard requires agencies to release information unless they can identify a specific harm that disclosure would cause.
+            </p>
+            <p>
+                A critical feature of FOIA is the right to judicial review, which allows individuals to challenge an agency's decision to withhold documents in federal court. If an agency improperly withholds records, a district court has the authority to enjoin the agency and order the production of the materials. For Congress, FOIA includes a "special access" provision (5 U.S.C. § 552(d)) clarifying that the Act does not authorize agencies to withhold information from the legislative branch. This ensures that while the general public is subject to specific exemptions, Congress retains its broad oversight authority to access internal agency information to monitor executive branch operations.
+            </p>
+            </section>
+            </div>
+            <div class="column">
+              <img src="SaveNCARLogo.webp" alt="Save NCAR">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+            We’d love to hear from you, so please reach out at
+            <a href="mailto:hello@savencar.org" style="color: #8FCBD5; text-decoration: none; font-weight: bold;">
+                hello@savencar.org
+            </a>.
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const slideMenu = document.querySelector('.slide-menu');
+            const content = document.querySelector('.content');
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                slideMenu.classList.toggle('active');
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

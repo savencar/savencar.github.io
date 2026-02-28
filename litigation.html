@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save NCAR</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #212529;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+        .navbar img {
+            height: 70px;
+        }
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .hamburger-bar {
+            width: 30px;
+            height: 3px;
+            background-color: #FFFFFF;
+            border-radius: 2px;
+            transition: all 0.3s linear;
+        }
+        .slide-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #212529;
+            padding-top: 90px;
+            transition: 0.3s;
+            z-index: 999;
+        }
+        .slide-menu a {
+            display: block;
+            color: #8FCBD5;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+        .slide-menu a:hover {
+            background-color: #3a3f44;
+        }
+        .content {
+            flex: 1 0 auto;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+        }
+        .row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .row:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        .row .column {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .row h1 {
+            font-size: 3.0em;
+        }
+        .row h2 {
+            font-size: 1.25em;
+        }
+        .row p {
+            font-size: 1.25em;
+        }
+        .row img {
+            max-width: 70%;
+            height: auto;
+            flex: 1;
+        }
+        .row .text {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .row a {
+            font-weight: bold;
+        }
+        .footer {
+            flex-shrink: 0;
+            background-color: #212529;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+        }
+        .slide-menu.active {
+            right: 0;
+        }
+        .content.active {
+            margin-right: 300px;
+        }
+        .hamburger.active .hamburger-bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active .hamburger-bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .hamburger-bar:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media screen and (max-aspect-ratio: 4/3) {
+          .row {
+            flex-direction: column;
+            padding: 10px;
+          }
+          .row .column {
+            max-width: 66%;
+          }
+          .row h1 {
+            font-size: 2em;
+          }
+          .row h2, .row p {
+            font-size: 1em;
+          }
+          .content {
+            padding: 10px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logos">
+            <a href="index.html" class="logo-link">
+                <img src="SaveNCARBanner2.webp" alt="Save NCAR" class="logo-main">
+            </a>
+            <span class="logo-separator"></span>
+            <a href="https://www.nokings.org" target="_blank" class="logo-link">
+                <img src="No+Kings+Logo_Horizontal_ForDarkBackgrounds.webp" alt="No Kings" class="logo-partner">
+            </a>
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+    </nav>
+
+    <div class="slide-menu">
+        <a href="index.html">Home</a>
+        <a href="challenge.html">Boulder Challenge</a>
+        <a href="timeline.html">Timeline & Key Events</a>
+        <a href="governance.html">Governance</a>
+        <a href="litigation.html">Litigation Tracker</a>
+        <a href="foia.html">FOIA Requests</a>
+        <a href="graphics.html">Graphics</a>
+    </div>
+
+    <div class="content">
+        <div class="row">
+            <div class="text">
+                <h1>Litigation Tracker</h1>
+                <h2>2025</h2>
+                <section>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            <span style="display: block; font-size: 0.85em; font-weight: bold; text-transform: uppercase;">May 28, 2025</span>
+                            <a href="https://clearinghouse.net/case/46640/" style="color: #348596; text-decoration: none; font-weight: bold; font-size: 1.1em;">State of New York v. National Science Foundation</a>
+                            <p>
+                                In the lawsuit New York v. National Science Foundation, sixteen states challenged two major Trump Administration policies: the April 2025 "Priority Directive," which ceased long-standing efforts to promote STEM participation among underrepresented groups (women, minorities, and people with disabilities) in favor of a "colorblind" funding model, and the May 2025 "Indirect Cost Directive," which capped university overhead reimbursements at 15%. The plaintiff states alleged these actions violated the Administrative Procedure Act (APA) and the Constitution's Separation of Powers by ignoring congressional mandates and causing the mass termination of existing research grants. However, the U.S. District Court for the Southern District of New York denied a preliminary injunction in August 2025, ruling that it likely lacked jurisdiction under the Tucker Act because the states were essentially seeking monetary relief exceeding $10,000, a matter reserved for the Court of Federal Claims. Following this jurisdictional setback, the states voluntarily dismissed the case on August 22, 2025, effectively ending this specific district court challenge to the NSF's restructuring of scientific priorities and funding.
+                            </p>
+                        </li>
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            <span style="display: block; font-size: 0.85em; font-weight: bold; text-transform: uppercase;">May 5, 2025</span>
+                            <a href="https://clearinghouse.net/case/46584/" style="color: #348596; text-decoration: none; font-weight: bold; font-size: 1.1em;">Association of American Universities v. National Science Foundation</a>
+                            <p>
+                                In the legal challenge Association of American Universities v. National Science Foundation, thirteen universities and three academic associations successfully overturned a May 2025 NSF policy that sought to impose a blanket 15% cap on "indirect cost" reimbursements for research grants, replacing the long-standing system of individually negotiated rates. The plaintiffs argued that the cap was "arbitrary and capricious" and lacked congressional authorization, as it would prevent institutions from recovering the actual infrastructure and administrative costs necessary to conduct federal research. In June 2025, U.S. District Judge Indira Talwani ruled in favor of the universities, finding that the NSF had ignored its own regulatory framework and failed to provide a reasoned explanation for the shift. The court subsequently vacated the policy and declared it unlawful; although the government initially appealed this decision to the First Circuit, it voluntarily dismissed that appeal in September 2025, leaving the court's rejection of the rate cap as the final ruling.
+                            </p>
+                        </li>
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            <span style="display: block; font-size: 0.85em; font-weight: bold; text-transform: uppercase;">April 28, 2025</span>
+                            <a href="https://clearinghouse.net/case/46507/" style="color: #348596; text-decoration: none; font-weight: bold; font-size: 1.1em;">American Federation of Government Employees v. Trump</a>
+                            <p>
+                                In the ongoing litigation of American Federation of Government Employees v. Trump, labor organizations and local governments are challenging Executive Order 14210 and its implementing "Accelerated Reduction-in-Force Procedures" (ARRPs) as unconstitutional attempts to dismantle federal agencies without congressional approval. While a district court initially halted these reorganizations through a preliminary injunction, the Supreme Court stayed that order in July 2025, suggesting the executive orders themselves were likely legal if implemented "consistent with applicable law." Despite this setback, the district court has allowed the case to proceed by compelling the government to produce internal ARRP documents over claims of executive privilege, a move recently upheld by the Ninth Circuit. As of February 2026, the legal battle has intensified with new challenges against specific personnel separations at FEMA, while the court continues to weigh whether the administration's large-scale staff reductions effectively override the statutory missions mandated by Congress.
+                            </p>
+                        </li>
+                        <li style="margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px;">
+                            <span style="display: block; font-size: 0.85em; font-weight: bold; text-transform: uppercase;">February 21, 2025</span>
+                            <a href="https://clearinghouse.net/case/46174/" style="color: #348596; text-decoration: none; font-weight: bold; font-size: 1.1em;">American Federation of State, County and Municipal Employees, AFL-CIO v. Social Security Administration</a>
+                            <p>
+                                In the ongoing litigation of AFSCME v. Social Security Administration, labor and advocacy groups are challenging the Trump Administration’s Department of Government Efficiency (DOGE) and Elon Musk over the allegedly unlawful access to sensitive federal information systems containing the personal data of millions of Americans. Plaintiffs contend that DOGE, a temporary organization created without congressional authorization, bypassed federal privacy and security laws to access Social Security records, leading a district court to issue a preliminary injunction in April 2025 requiring DOGE to delete non-anonymized data. Although the Supreme Court stayed this injunction in June 2025, the case took a significant turn in January 2026 when the government admitted that previous court filings contained material misstatements and that DOGE members had utilized unapproved third-party servers to share sensitive data. These revelations—including potential violations of a 2025 restraining order and the referral of officials for Hatch Act violations—have prompted the Fourth Circuit to supplement the appellate record as it weighs the legality of DOGE’s data practices and their impact on constitutional and statutory privacy protections.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="column">
+              <img src="SaveNCARLogo.webp" alt="Save NCAR">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+            We’d love to hear from you, so please reach out at
+            <a href="mailto:hello@savencar.org" style="color: #8FCBD5; text-decoration: none; font-weight: bold;">
+                hello@savencar.org
+            </a>.
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const slideMenu = document.querySelector('.slide-menu');
+            const content = document.querySelector('.content');
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                slideMenu.classList.toggle('active');
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

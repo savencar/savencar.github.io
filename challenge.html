@@ -155,6 +155,17 @@
             padding: 10px;
           }
         }
+
+        .gallery {
+          display: flex;          /* flex or grid */
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+
+        .gallery img {
+          max-width: 45%;           /* width: 200px; or max-width: 100%; */
+          height: auto;
+        }
     </style>
 </head>
 <body>
@@ -234,6 +245,18 @@
             </div>
             <div class="column">
               <img src="SaveNCARBoulderChallengePoster-28x22.webp" alt="Welcome to Boulder">
+            </div>
+        </div>
+        <div class="row">
+            <div class="text">
+                <h1>Challenge Submissions</h1>
+                <h2>
+                    Thank you to all challengers for your submissions!
+                </h2>
+                <div class="gallery">
+                    <img src="WelcomeToBoulder-Concept.webp" alt="Concept 1">
+                    <img src="ncar-c130-welcome-to-boulder.webp" alt="Concept 2">
+                </div>
             </div>
         </div>
     </div>
